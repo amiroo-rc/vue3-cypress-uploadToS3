@@ -1,4 +1,4 @@
-# Cypress Video Recorder for Vue3
+# Cypress Video Uploader to S3 Server in Vue3
 
 Hello,
 
