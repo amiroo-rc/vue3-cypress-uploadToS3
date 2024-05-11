@@ -1,61 +1,23 @@
-# vuejs_S3_cypress
+# Cypress Tests Video Uploader to S3 Server in Vue3
 
-This template should help get you started developing with Vue 3 in Vite.
+Hello,
 
-## Recommended IDE Setup
+Perhaps you also need to save executed test videos in Vue3 when Cypress tests are done and then upload them to your desired S3 server.
+## Requirements :
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- `@aws-sdk/client-s3` : https://www.npmjs.com/package/@aws-sdk/client-s3
+- `Cypress` : https://www.npmjs.com/package/@aws-sdk/client-s3
+- `Node.js`: https://nodejs.org/en
 
-## Type Support for `.vue` Imports in TS
+## Installation and Usage
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Run the command `npm install`.
+2. Enter your S3 server variables in the  "cypress.env.json" file.
+3. Execute the command `npx cypress run` (tests will start running).
+4. The test videos will be saved in "./cypress/videos" file.
+5. Afterward, they will be uploaded to your S3 server.
 
-## Customize configuration
+## Configuration and Important Notes
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Read the file "cypress.config.ts".
+- S3 server variables are located in the file "cypress.env.json".
